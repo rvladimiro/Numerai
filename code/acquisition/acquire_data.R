@@ -1,4 +1,4 @@
-# Boot ----
+# Boot -------------------------------------------------------------------------
 
 dafR::Say('Cleaning Workspace...')
 rm(list = ls())
@@ -15,7 +15,7 @@ currentDate <- stringr::str_replace_all(string = Sys.Date(),
 
 
 
-# Download training data ----
+# Download training data -------------------------------------------------------
 
 if(paste0('train', currentDate, '.csv') %in% list.files('data/')) {
     dafR::Shout('Training data for', as.character(Sys.Date()), 'found!')
@@ -29,7 +29,7 @@ if(paste0('train', currentDate, '.csv') %in% list.files('data/')) {
 
 
 
-# Download prediction data ----
+# Download prediction data -----------------------------------------------------
 
 if(paste0('predict', currentDate, '.csv') %in% list.files('data/')) {
     dafR::Shout('Prediction data for', as.character(Sys.Date()), 'found!')
